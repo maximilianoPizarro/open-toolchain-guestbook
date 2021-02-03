@@ -1,0 +1,20 @@
+{
+  "name": "canary-testing",
+  "private": true,
+  "version": "0.0.1",
+  "description": "canary testing dependencies",
+  "scripts": {
+    "test-fvt": "mocha test/fvt-test.js --reporter json --reporter-options output=test/fvt-test.json | tee test/fvt-test.json",
+    "start-server": "node test/test.js",
+    "stop-server": "pkill -f test/test.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-dom": "1.8.2",
+    "node-html-parser": "2.1.0",
+    "mocha": "^7.0.1",
+    "nyc": "*",
+    "request-json": "*",
+    "express": "4.17.1"
+  }
+}
